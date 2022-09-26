@@ -1,8 +1,8 @@
 # test
 
-## Project setup
+## 使用技术栈
 ```
-npm install
+vue2 + Echarts + pm2 + webpack-dev-server
 ```
 
 ### Compiles and hot-reloads for development
