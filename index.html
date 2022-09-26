@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script>
+        // const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin')
+        // var a = 10;
+        // pricesWs.onmessage = function (msg) {
+        //     console.log(a, 999);
+        //     // console.log(msg.data)
+        // }
+        const tradeWs = new WebSocket('wss://ws.coincap.io/trades/binance')
+
+        tradeWs.onmessage = function (msg) {
+            console.log(msg.data)
+        }
+            // 基于准备好的dom，初始化echarts实例
+
+            // var chartDom = document.getElementById('main');
+            // var myChart = echarts.init(chartDom);
+            // var option;
+            // option = {
+            //     xAxis: {
+            //         axisLine: {
+            //             lineStyle: {
+            //                 // type: 'dashed'
+            //             }
+            //         },
+            //         // 刻度
+            //         axisTick: {
+            //             length: 5,
+            //             lineStyle: {
+            //                 // type: 'dashed'
+            //             }
+            //         },
+            //         axisLabel: {
+            //             formatter: '{value} kg',
+            //             align: 'center'
+            //         },
+            //         nameTextStyle: { 
+            //             align: 'center',
+            //             verticalAlign: 'middle',
+            //             padding: [3, 4, 5, 6],
+            //             width: 1000
+            //         },
+            //         // gridIndex: 1,
+            //         show: true,
+            //         position: 'bottom',
+            //         type: 'category',
+            //         name: '销售时间sdfdsfrsdfsrfsrfsdfsrfesrfsrf',
+            //         data: [1,2,3],
+            //         // nameLocation: 'middle'
+            //     },
+            //     yAxis: [
+            //         {
+            //             type: 'value',
+            //             name: '销售数量',
+            //             axisTick: {
+            //                 length: 6,
+            //                 lineStyle: {
+            //                     type: 'dashed'
+            //                 }
+            //             }
+            //         },
+            //         {
+            //             type: 'value',
+            //             name: '销售金额'
+            //         }
+            //     ],
+            //     series: [
+            //         {
+            //             data: [1,2,3,4],
+            //             type: 'line'
+            //         }
+            //     ]
+            // }
+
+            // myChart.setOption(option);
+
+    </script>
+</body>
+</html>
